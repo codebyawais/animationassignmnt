@@ -1,0 +1,486 @@
+/* .box{
+    margin: 100px;
+    height: 200px;
+    width: 200px;
+    background-color: teal;
+    
+    transition-duration:1s ;
+    transition-property: border-radius,background-color;
+    
+    transition-delay: 0.1s; */
+    /* transition: 1s; */
+    /* transition-property: all; */
+/* }
+.box:hover{
+    background-color: purple;
+    border-radius: 50px;
+    transform: rotate(180deg);
+} */
+ /* HTML: <div class="loader"></div> */
+.loader {
+    width: 60px;
+    aspect-ratio: 2;
+    --_g: no-repeat radial-gradient(circle closest-side,#000 90%,#0000);
+    background: 
+      var(--_g) 0%   50%,
+      var(--_g) 50%  50%,
+      var(--_g) 100% 50%;
+    background-size: calc(100%/3) 50%;
+    animation: l3 1s infinite linear;
+  }
+  @keyframes l3 {
+      20%{background-position:0%   0%, 50%  50%,100%  50%}
+      40%{background-position:0% 100%, 50%   0%,100%  50%}
+      60%{background-position:0%  50%, 50% 100%,100%   0%}
+      80%{background-position:0%  50%, 50%  50%,100% 100%}
+  }
+
+body{
+    margin: 0;
+    padding: 0;
+    background-color: teal;
+    display: flex;
+ align-items: center;
+ justify-content:center ;
+ flex-direction: column;
+ gap: 100px;
+}
+
+.container{
+    height: 300px;
+    border: 1px solid white;
+    width: 300px;
+    animation: orbit 4s linear infinite;
+    border-radius: 50%;
+    /* animation: cie=rcle; */
+}
+.box{
+    width: 100px;
+    height: 100px;
+    background-color: white;
+    border-radius: 50%;
+   /* animation-name: circles; */
+   animation-duration: 4s;
+}
+@keyframes orbit  {
+    from{
+        transform: rotate(0);
+    }
+    to{
+        transform: rotate(360deg);
+    }
+}
+@keyframes circles{
+    0%{
+        transform: translate(0, 0);
+    }
+    25%{
+        transform: translate(200px, 0);
+    }
+    50%{
+        transform: translate(200px, 200px);
+    }
+    75%{
+        transform: translate(0, 200px);
+    }
+
+}
+
+
+
+.nav{
+display: flex;
+gap: 20px;
+list-style: none;  
+
+}
+
+.item{
+font-size: 2rem;
+ transition: ease-in 0.3s ; 
+ padding: 8px 16px;
+}
+.item:hover{
+background-color: black;
+color: white; 
+/* height: 40px;
+width: 70px; */
+display: flex;
+justify-content: center;
+align-items: center;
+cursor: pointer;
+animation: bounce 0.6s ease-in-out ;
+
+transform: translateY(10px);
+/* transform: translateX(-10px); */
+
+}
+@keyframes bounce {
+    0% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-10px); /* Move up 10px */
+    }
+    100% {
+      transform: translateY(10px); /* Move down 10px */
+    }
+  }
+  .textsec1{
+    margin: 90px;
+ /* border: 1px solid black; */
+ height: 500px;
+
+
+  }
+  .textsec2{
+ /* border: 1px solid black; */
+ height: 500px;
+ width: 50%;
+ animation: slide 1s linear infinite;
+
+  }
+  .textsec2 h1{
+    font-size: 60px;
+    
+
+  }
+  @keyframes slide {
+    from {
+      transform: translateX(70%);
+    }
+    to {
+      transform: translateX(0px);
+    }
+  }
+  
+  .textsecfad{
+    border: 1px solid black;
+    height: 500px;
+    width: 50%;
+    animation:fadeIn 1s linear infinite;
+   
+ 
+     }
+     .textsecfad h1{
+        font-size: 60px;
+        
+    
+      }
+     @keyframes fadeIn {
+        from {
+          opacity: 1;
+        }
+        to {
+          opacity: 0.5;
+        }
+      }
+      .textsec1bg{
+        margin: 90px;
+     /* border: 1px solid black; */
+     height: 500px;
+   
+    
+      }
+  .textsecbg{
+    border: 1px solid black;
+    height: 500px;
+    width: 50%;
+    /* animation:fadeIn 1s linear infinite; */
+    background: rgba(180, 0, 0, 0.7);
+   
+ 
+     }
+     .textsecbg h1{
+        font-size: 60px;
+        
+    
+      }
+     @keyframes fadeIn {
+        from {
+          opacity: 0;
+        }
+        to {
+          opacity: 1;
+        }
+      }
+      .textsecfadout{
+        border: 1px solid black;
+        height: 500px;
+        width: 50%;
+        animation:fadeOut 1s linear infinite;
+       
+     
+         }
+         .textsecfadout h1{
+            font-size: 60px;
+          }
+         @keyframes fadeOut {
+            from {
+              opacity: 1;
+            }
+            to {
+              opacity: 0;
+            }
+          }
+          .textsec1bg{
+            margin: 90px;
+         height: 500px;
+          }
+      .textsecbonous{
+        /* border: 1px solid black; */
+        height: 500px;
+        width: 50%;
+        animation: bounce 1s linear infinite;
+       
+     
+         }
+         .textsecbonous h1{
+            font-size: 60px;
+          }
+          @keyframes bounce {
+            0%, 100% {
+              transform: translateY(0);
+            }
+            50% {
+              transform: translateY(-30px);
+            }
+          }
+          
+          .textsec1{
+            margin: 90px;
+            border: 1px solid black;
+         height: 500px;
+          }
+          .textsecbonous2{
+            /* border: 1px solid black; */
+            height: 500px;
+            width: 50%;
+            animation: bounce 1s ease-in infinite;
+           
+         
+             }
+             .textsecbonous2 h1{
+                font-size: 60px;
+              }
+              @keyframes bounce {
+                0%, 100% {
+                  transform: translateY(0);
+                }
+                50% {
+                  transform: translateY(-30px);
+                }
+              }
+          .textseczoomin{
+            height: 500px;
+            width: 50%;
+            animation: zoomIn 1s  infinite;
+           
+         
+             }
+             .textseczoomin h1{
+                font-size: 60px;
+              }
+              @keyframes zoomIn {
+                from {
+                  transform: scale(0.6);
+                }
+                to {
+                  transform: scale(1);
+                }
+              }
+          .textseczmout{
+            height: 500px;
+            width: 50%;
+            animation: zoomOut 1s ease-in infinite;
+           
+         
+             }
+             .textseczmout h1{
+                font-size: 60px;
+              }
+              @keyframes zoomOut {
+                from {
+                  transform: scale(1);
+                }
+                to {
+                  transform: scale(0.5);
+                }
+              }
+          .textsecpulse{
+            height: 500px;
+            width: 50%;
+            animation: pulse 1s ease-in infinite;
+           
+         
+             }
+             .textsecpulse h1{
+                font-size: 60px;
+              }
+              @keyframes pulse {
+                0%, 100% {
+                  transform: scale(1);
+                }
+                50% {
+                  transform: scale(1.1);
+                }
+              }
+          .textsecwobble{
+            height: 500px;
+            width: 50%;
+            animation: wobble 1s  infinite;
+           
+         
+             }
+             .textsecwobble h1{
+                font-size: 60px;
+              }
+              @keyframes wobble {
+                0% {
+                  transform: translateX(0);
+                }
+                25% {
+                  transform: translateX(-10px) rotate(-5deg);
+                }
+                50% {
+                  transform: translateX(10px) rotate(5deg);
+                }
+                100% {
+                  transform: translateX(0);
+                }
+              }
+          .textsecflip{
+            height: 500px;
+            width: 50%;
+            animation:  flip 1s  infinite;
+           
+         
+             }
+             .textsecflip h1{
+                font-size: 60px;
+              }
+              @keyframes flip {
+                from {
+                  transform: rotateY(0);
+                }
+                to {
+                  transform: rotateY(90deg);
+                }
+              }
+          .textsecshake{
+            height: 500px;
+            width: 50%;
+            animation:  shake 1s  infinite;
+           
+         
+             }
+             .textsecshake h1{
+                font-size: 60px;
+              }
+              @keyframes shake {
+                0%, 100% {
+                  transform: translateX(0);
+                }
+                10%, 30%, 50%, 70%, 90% {
+                  transform: translateX(-10px);
+                }
+                20%, 40%, 60%, 80% {
+                  transform: translateX(10px);
+                }
+              }
+          .textsecswing{
+            height: 500px;
+            width: 50%;
+            animation:  swing 1s  infinite;
+           
+         
+             }
+             .textsecswing h1{
+                font-size: 60px;
+              }
+              @keyframes swing {
+                20% {
+                  transform: rotate(15deg);
+                }
+                40% {
+                  transform: rotate(-10deg);
+                }
+                60% {
+                  transform: rotate(5deg);
+                }
+                80% {
+                  transform: rotate(-5deg);
+                }
+                100% {
+                  transform: rotate(0deg);
+                }
+              }
+              
+          .textsecflash{
+            height: 500px;
+            width: 50%;
+            animation:  flash 1s  infinite;
+           
+         
+             }
+             .textsecflash h1{
+                font-size: 60px;
+              }
+              @keyframes flash {
+                0%, 50%, 100% {
+                  opacity: 1;
+                }
+                25%, 75% {
+                  opacity: 0;
+                }
+              }
+              
+          .textsecheartbeat{
+            height: 500px;
+            width: 50%;
+            animation:  heartbeat 1s  infinite;
+           
+         
+             }
+             .textsecheartbeat h1{
+                font-size: 60px;
+              }
+              @keyframes heartbeat {
+                0%, 100% {
+                  transform: scale(1);
+                }
+                25%, 75% {
+                  transform: scale(1.1);
+                }
+              }
+              
+              
+          .textsecskew{
+            height: 500px;
+            width: 50%;
+            animation:  skew 1s  infinite;
+           
+         
+             }
+             .textsecskew h1{
+                font-size: 60px;
+              }
+              @keyframes skew {
+                from {
+                  transform: skewX(0deg);
+                }
+                to {
+                  transform: skewX(20deg);
+                }
+              }
+              
+              
+              
+              
+              
+              
+              
+              
+              
+              
+    
